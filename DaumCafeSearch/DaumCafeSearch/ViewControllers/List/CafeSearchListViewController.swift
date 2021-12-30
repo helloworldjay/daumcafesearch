@@ -24,6 +24,18 @@ final class CafeSearchListViewController: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
+  
+  
+  // MARK: Button Action
+  
+  private func setSearchBarButton() {
+    self.searchBar.searchButton.addTarget(self, action: #selector(self.searchCafeArticle), for: .touchUpInside)
+  }
+  
+  @objc private func searchCafeArticle(sender: UIButton) {
+    self.searchKeyword = self.searchBar.text ?? ""
+    self.loadList()
+  }
 
 
 // MARK: - Preview
