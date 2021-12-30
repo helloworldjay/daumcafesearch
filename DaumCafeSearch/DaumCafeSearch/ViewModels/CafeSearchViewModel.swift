@@ -26,3 +26,12 @@ final class CafeSearchViewModel: CafeSearchViewModelLogic {
   private var cafeArticleList: [CafeArticle] = []
   private var isLoading = false
 }
+
+
+// MARK: - Array
+
+extension Array {
+  subscript(safe index: Int) -> Element? {
+    return self.indices ~= index ? self[index] : nil
+  }
+}
