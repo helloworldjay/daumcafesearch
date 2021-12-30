@@ -36,6 +36,38 @@ final class CafeSearchListViewController: UIViewController {
     self.searchKeyword = self.searchBar.text ?? ""
     self.loadList()
   }
+  
+  
+  // MARK: Refresh Action
+  
+  private func setRefreshControl() {
+    self.cafeArticleListView.refreshControl = UIRefreshControl()
+    cafeArticleListView.refreshControl?.addTarget(self, action: #selector(onRefresh), for: .valueChanged)
+  }
+  
+  @objc private func onRefresh() {
+    self.loadList()
+  }
+  
+  private func loadList() {
+    if self.searchKeyword == "" { return }
+    
+    viewModel?.loadingStarted = { [weak activity] in
+      activity?.isHidden = false
+      activity?.startAnimating()
+    }
+    
+    viewModel?.loadingEnded = { [weak activity] in
+      activity?.stopAnimating()
+    }
+    
+    viewModel?.cafeArticleListUpdated = { [weak self] in
+      self?.cafeArticleListView.reloadData()
+      self?.cafeArticleListView.refreshControl?.endRefreshing()
+    }
+    
+    viewModel?.list(with: self.searchKeyword)
+  }
 
 
 // MARK: - Preview
