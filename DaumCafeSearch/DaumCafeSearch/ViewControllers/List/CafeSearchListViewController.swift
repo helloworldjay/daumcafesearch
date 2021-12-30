@@ -62,6 +62,7 @@ final class CafeSearchListViewController: UIViewController {
     self.viewModel?.repository?.networkManager = NetworkManager()
     
     self.cafeArticleListView.dataSource = self
+    self.cafeArticleListView.delegate = self
     
     self.setSearchBarButton()
     self.setRefreshControl()
@@ -113,7 +114,7 @@ final class CafeSearchListViewController: UIViewController {
 }
 
 
-// MARK: - UITableView Delegate
+// MARK: - UITableView DataSource
 
 extension CafeSearchListViewController: UITableViewDataSource {
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -124,6 +125,17 @@ extension CafeSearchListViewController: UITableViewDataSource {
     let cell = self.cafeArticleListView.dequeueReusableCell(withIdentifier: "CafeListCell", for: indexPath) as! CafeListCell
     cell.setData(with: self.viewModel?.cafeArticle(at: indexPath.row))
     return cell
+  }
+}
+
+
+// MARK: UITableView Delegate
+
+extension CafeSearchListViewController: UITableViewDelegate {
+  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    let detailViewController = CafeArticleDetailViewController()
+    detailViewController.article = viewModel?.cafeArticle(at: indexPath.row)
+    self.navigationController?.pushViewController(detailViewController, animated: true)
   }
 }
 
