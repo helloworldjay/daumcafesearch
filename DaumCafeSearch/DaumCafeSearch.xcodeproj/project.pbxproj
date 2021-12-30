@@ -24,6 +24,7 @@
 		48C3CC83277D4C0E003B2A55 /* CafeListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C3CC82277D4C0E003B2A55 /* CafeListCell.swift */; };
 		48C3CC85277D4C4F003B2A55 /* CafeListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C3CC84277D4C4F003B2A55 /* CafeListView.swift */; };
 		48C3CC88277D4ECB003B2A55 /* DaumCafeSearchResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C3CC87277D4ECB003B2A55 /* DaumCafeSearchResponse.swift */; };
+		48C3CC8A277D4F05003B2A55 /* CafeArticle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C3CC89277D4F05003B2A55 /* CafeArticle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		48C3CC82277D4C0E003B2A55 /* CafeListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CafeListCell.swift; sourceTree = "<group>"; };
 		48C3CC84277D4C4F003B2A55 /* CafeListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CafeListView.swift; sourceTree = "<group>"; };
 		48C3CC87277D4ECB003B2A55 /* DaumCafeSearchResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaumCafeSearchResponse.swift; sourceTree = "<group>"; };
+		48C3CC89277D4F05003B2A55 /* CafeArticle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CafeArticle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -183,6 +185,7 @@
 			isa = PBXGroup;
 			children = (
 				48C3CC87277D4ECB003B2A55 /* DaumCafeSearchResponse.swift */,
+				48C3CC89277D4F05003B2A55 /* CafeArticle.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -330,6 +333,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				48C3CC83277D4C0E003B2A55 /* CafeListCell.swift in Sources */,
+				48C3CC8A277D4F05003B2A55 /* CafeArticle.swift in Sources */,
 				48C3CC85277D4C4F003B2A55 /* CafeListView.swift in Sources */,
 				48C3CC88277D4ECB003B2A55 /* DaumCafeSearchResponse.swift in Sources */,
 				48C3CC3D277D4309003B2A55 /* AppDelegate.swift in Sources */,
