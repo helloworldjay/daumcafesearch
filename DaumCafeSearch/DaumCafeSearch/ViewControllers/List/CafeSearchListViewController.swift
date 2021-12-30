@@ -24,6 +24,33 @@ final class CafeSearchListViewController: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
+    
+    self.attribute()
+    self.layout()
+  }
+  
+  private func attribute() {
+    self.navigationItem.title = "Daum 카페 검색"
+    self.view.backgroundColor = .white
+  }
+  
+  private func layout() {
+    [self.searchBar, self.cafeArticleListView, self.activity].forEach { self.view.addSubview($0) }
+    
+    self.searchBar.snp.makeConstraints {
+      $0.top.equalToSuperview().offset(100)
+      $0.leading.trailing.equalToSuperview()
+    }
+    
+    self.cafeArticleListView.snp.makeConstraints {
+      $0.top.equalTo(searchBar.snp.bottom)
+      $0.leading.trailing.bottom.equalToSuperview()
+    }
+    
+    self.activity.snp.makeConstraints {
+      $0.center.equalToSuperview()
+    }
+  }
   
   
   // MARK: Button Action
