@@ -25,6 +25,8 @@
 		48C3CC85277D4C4F003B2A55 /* CafeListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C3CC84277D4C4F003B2A55 /* CafeListView.swift */; };
 		48C3CC88277D4ECB003B2A55 /* DaumCafeSearchResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C3CC87277D4ECB003B2A55 /* DaumCafeSearchResponse.swift */; };
 		48C3CC8A277D4F05003B2A55 /* CafeArticle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C3CC89277D4F05003B2A55 /* CafeArticle.swift */; };
+		48C3CC8D277D50FD003B2A55 /* NetworkRequestRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C3CC8C277D50FD003B2A55 /* NetworkRequestRouter.swift */; };
+		48C3CC8F277D5125003B2A55 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C3CC8E277D5125003B2A55 /* NetworkManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +65,8 @@
 		48C3CC84277D4C4F003B2A55 /* CafeListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CafeListView.swift; sourceTree = "<group>"; };
 		48C3CC87277D4ECB003B2A55 /* DaumCafeSearchResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaumCafeSearchResponse.swift; sourceTree = "<group>"; };
 		48C3CC89277D4F05003B2A55 /* CafeArticle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CafeArticle.swift; sourceTree = "<group>"; };
+		48C3CC8C277D50FD003B2A55 /* NetworkRequestRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequestRouter.swift; sourceTree = "<group>"; };
+		48C3CC8E277D5125003B2A55 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +123,7 @@
 			children = (
 				48C3CC79277D464F003B2A55 /* ViewControllers */,
 				48C3CC86277D4EAA003B2A55 /* Models */,
+				48C3CC8B277D50DE003B2A55 /* Network */,
 				48C3CC6C277D43E8003B2A55 /* Resources */,
 			);
 			path = DaumCafeSearch;
@@ -188,6 +193,15 @@
 				48C3CC89277D4F05003B2A55 /* CafeArticle.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		48C3CC8B277D50DE003B2A55 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				48C3CC8E277D5125003B2A55 /* NetworkManager.swift */,
+				48C3CC8C277D50FD003B2A55 /* NetworkRequestRouter.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -333,8 +347,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				48C3CC83277D4C0E003B2A55 /* CafeListCell.swift in Sources */,
+				48C3CC8D277D50FD003B2A55 /* NetworkRequestRouter.swift in Sources */,
 				48C3CC8A277D4F05003B2A55 /* CafeArticle.swift in Sources */,
 				48C3CC85277D4C4F003B2A55 /* CafeListView.swift in Sources */,
+				48C3CC8F277D5125003B2A55 /* NetworkManager.swift in Sources */,
 				48C3CC88277D4ECB003B2A55 /* DaumCafeSearchResponse.swift in Sources */,
 				48C3CC3D277D4309003B2A55 /* AppDelegate.swift in Sources */,
 				48C3CC7F277D4A1D003B2A55 /* SearchBar.swift in Sources */,

@@ -5,10 +5,10 @@
 //  Created by Seungjin Baek on 2021/12/30.
 //
 
+import UIKit
+
 import SnapKit
 import Then
-
-import UIKit
 
 class SearchBar: UISearchBar {
   

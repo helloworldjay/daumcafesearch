@@ -5,10 +5,10 @@
 //  Created by Seungjin Baek on 2021/12/30.
 //
 
-import SnapKit
-import Kingfisher
-
 import UIKit
+
+import Kingfisher
+import SnapKit
 
 final class CafeListCell: UITableViewCell {
   
