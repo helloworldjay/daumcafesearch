@@ -95,11 +95,7 @@
 		48C3CC3B277D4309003B2A55 /* DaumCafeSearch */ = {
 			isa = PBXGroup;
 			children = (
-				48C3CC3C277D4309003B2A55 /* AppDelegate.swift */,
-				48C3CC3E277D4309003B2A55 /* SceneDelegate.swift */,
-				48C3CC45277D430C003B2A55 /* Assets.xcassets */,
-				48C3CC47277D430C003B2A55 /* LaunchScreen.storyboard */,
-				48C3CC4A277D430C003B2A55 /* Info.plist */,
+				48C3CC6C277D43E8003B2A55 /* Resources */,
 			);
 			path = DaumCafeSearch;
 			sourceTree = "<group>";
@@ -119,6 +115,18 @@
 				48C3CC5F277D430C003B2A55 /* DaumCafeSearchUITestsLaunchTests.swift */,
 			);
 			path = DaumCafeSearchUITests;
+			sourceTree = "<group>";
+		};
+		48C3CC6C277D43E8003B2A55 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				48C3CC3C277D4309003B2A55 /* AppDelegate.swift */,
+				48C3CC3E277D4309003B2A55 /* SceneDelegate.swift */,
+				48C3CC45277D430C003B2A55 /* Assets.xcassets */,
+				48C3CC47277D430C003B2A55 /* LaunchScreen.storyboard */,
+				48C3CC4A277D430C003B2A55 /* Info.plist */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
