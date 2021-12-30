@@ -8,12 +8,22 @@
 import Foundation
 
 protocol CafeSearchRepositoryLogic {
+  var networkManager: NetworkManagerLogic? { get set }
+  func list(with keyword: String, completion: @escaping ([CafeArticle]) -> Void)
 }
 
 
 // MARK: - Repository
 
 final class CafeSearchRepository: CafeSearchRepositoryLogic {
+  var networkManager: NetworkManagerLogic?
+  
+  func list(with keyword: String, completion: @escaping ([CafeArticle]) -> Void) {
+    self.networkManager?.fetchDaumCafeList(with: keyword) { [weak self] response in
+      completion(self?.parseCafeList(of: response) ?? [])
+    }
+  }
+  
   private func parseCafeList(of response: DaumCafeSearchResponse) -> [CafeArticle] {
     return response.cafeArticles.map {
       CafeArticle(
@@ -26,6 +36,7 @@ final class CafeSearchRepository: CafeSearchRepositoryLogic {
       )
     }
   }
+}
 
 
 // MARK: - Edit HTML String
