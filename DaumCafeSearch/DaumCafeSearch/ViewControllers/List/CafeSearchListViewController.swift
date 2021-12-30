@@ -22,11 +22,15 @@ final class CafeSearchListViewController: UIViewController {
   var searchKeyword = ""
   var viewModel: CafeSearchViewModelLogic?
   
+  
+  // MARK: Initializers
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     
     self.attribute()
     self.layout()
+    self.configure()
   }
   
   private func attribute() {
@@ -50,6 +54,17 @@ final class CafeSearchListViewController: UIViewController {
     self.activity.snp.makeConstraints {
       $0.center.equalToSuperview()
     }
+  }
+  
+  private func configure() {
+    self.viewModel = CafeSearchViewModel()
+    self.viewModel?.repository = CafeSearchRepository()
+    self.viewModel?.repository?.networkManager = NetworkManager()
+    
+    self.cafeArticleListView.dataSource = self
+    
+    self.setSearchBarButton()
+    self.setRefreshControl()
   }
   
   
@@ -95,6 +110,7 @@ final class CafeSearchListViewController: UIViewController {
     
     viewModel?.list(with: self.searchKeyword)
   }
+}
 
 
 // MARK: - UITableView Delegate
