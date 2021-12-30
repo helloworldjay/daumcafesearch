@@ -8,7 +8,20 @@
 import UIKit
 import SwiftUI
 
+import Then
+
 final class CafeSearchListViewController: UIViewController {
+  
+  // MARK: Properties
+  
+  let searchBar = SearchBar()
+  let cafeArticleListView = CafeListView()
+  let activity = UIActivityIndicatorView().then {
+    $0.tintColor = .daumCafeColor
+  }
+  var searchKeyword = ""
+  var viewModel: CafeSearchViewModelLogic?
+  
   override func viewDidLoad() {
     super.viewDidLoad()
 
