@@ -12,6 +12,8 @@ protocol CafeSearchViewModelLogic {
   var loadingStarted: () -> Void { get set }
   var loadingEnded: () -> Void { get set }
   var cafeArticleListUpdated: () -> Void { get set }
+  func cafeArticle(at index: Int) -> CafeArticle?
+  func countCafeArticleList() -> Int
 }
 
 final class CafeSearchViewModel: CafeSearchViewModelLogic {
@@ -25,6 +27,17 @@ final class CafeSearchViewModel: CafeSearchViewModelLogic {
   
   private var cafeArticleList: [CafeArticle] = []
   private var isLoading = false
+  
+  
+  // MARK: Cafe Articles
+  
+  func cafeArticle(at index: Int) -> CafeArticle? {
+    return self.cafeArticleList[safe: index]
+  }
+  
+  func countCafeArticleList() -> Int {
+    return self.cafeArticleList.count
+  }
 }
 
 
