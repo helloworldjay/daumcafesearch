@@ -14,6 +14,10 @@
 		48C3CC54277D430C003B2A55 /* DaumCafeSearchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C3CC53277D430C003B2A55 /* DaumCafeSearchTests.swift */; };
 		48C3CC5E277D430C003B2A55 /* DaumCafeSearchUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C3CC5D277D430C003B2A55 /* DaumCafeSearchUITests.swift */; };
 		48C3CC60277D430C003B2A55 /* DaumCafeSearchUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C3CC5F277D430C003B2A55 /* DaumCafeSearchUITestsLaunchTests.swift */; };
+		48C3CC6F277D44B3003B2A55 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 48C3CC6E277D44B3003B2A55 /* SnapKit */; };
+		48C3CC72277D44BB003B2A55 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 48C3CC71277D44BB003B2A55 /* Alamofire */; };
+		48C3CC75277D44C1003B2A55 /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = 48C3CC74277D44C1003B2A55 /* Then */; };
+		48C3CC78277D44C7003B2A55 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 48C3CC77277D44C7003B2A55 /* Kingfisher */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +56,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				48C3CC78277D44C7003B2A55 /* Kingfisher in Frameworks */,
+				48C3CC6F277D44B3003B2A55 /* SnapKit in Frameworks */,
+				48C3CC75277D44C1003B2A55 /* Then in Frameworks */,
+				48C3CC72277D44BB003B2A55 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -145,6 +153,12 @@
 			dependencies = (
 			);
 			name = DaumCafeSearch;
+			packageProductDependencies = (
+				48C3CC6E277D44B3003B2A55 /* SnapKit */,
+				48C3CC71277D44BB003B2A55 /* Alamofire */,
+				48C3CC74277D44C1003B2A55 /* Then */,
+				48C3CC77277D44C7003B2A55 /* Kingfisher */,
+			);
 			productName = DaumCafeSearch;
 			productReference = 48C3CC39277D4309003B2A55 /* DaumCafeSearch.app */;
 			productType = "com.apple.product-type.application";
@@ -217,6 +231,12 @@
 				Base,
 			);
 			mainGroup = 48C3CC30277D4309003B2A55;
+			packageReferences = (
+				48C3CC6D277D44B3003B2A55 /* XCRemoteSwiftPackageReference "snapkit" */,
+				48C3CC70277D44BB003B2A55 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				48C3CC73277D44C1003B2A55 /* XCRemoteSwiftPackageReference "Then" */,
+				48C3CC76277D44C7003B2A55 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = 48C3CC3A277D4309003B2A55 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -614,6 +634,64 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		48C3CC6D277D44B3003B2A55 /* XCRemoteSwiftPackageReference "snapkit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/snapkit/snapkit.git";
+			requirement = {
+				branch = develop;
+				kind = branch;
+			};
+		};
+		48C3CC70277D44BB003B2A55 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		48C3CC73277D44C1003B2A55 /* XCRemoteSwiftPackageReference "Then" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/devxoul/Then";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		48C3CC76277D44C7003B2A55 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		48C3CC6E277D44B3003B2A55 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 48C3CC6D277D44B3003B2A55 /* XCRemoteSwiftPackageReference "snapkit" */;
+			productName = SnapKit;
+		};
+		48C3CC71277D44BB003B2A55 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 48C3CC70277D44BB003B2A55 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		48C3CC74277D44C1003B2A55 /* Then */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 48C3CC73277D44C1003B2A55 /* XCRemoteSwiftPackageReference "Then" */;
+			productName = Then;
+		};
+		48C3CC77277D44C7003B2A55 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 48C3CC76277D44C7003B2A55 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 48C3CC31277D4309003B2A55 /* Project object */;
 }
