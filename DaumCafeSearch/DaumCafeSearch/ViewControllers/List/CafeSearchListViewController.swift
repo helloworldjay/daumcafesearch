@@ -70,6 +70,21 @@ final class CafeSearchListViewController: UIViewController {
   }
 
 
+// MARK: - UITableView Delegate
+
+extension CafeSearchListViewController: UITableViewDataSource {
+  func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    return self.viewModel?.countCafeArticleList() ?? 0
+  }
+  
+  func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    let cell = self.cafeArticleListView.dequeueReusableCell(withIdentifier: "CafeListCell", for: indexPath) as! CafeListCell
+    cell.setData(with: self.viewModel?.cafeArticle(at: indexPath.row))
+    return cell
+  }
+}
+
+
 // MARK: - Preview
 
 struct MainViewController_Previews: PreviewProvider {
