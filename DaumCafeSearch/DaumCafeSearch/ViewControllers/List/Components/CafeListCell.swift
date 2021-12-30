@@ -97,4 +97,22 @@ final class CafeListCell: UITableViewCell {
       $0.width.height.equalTo(80)
     }
   }
+  
+  func setData(with data: CafeArticle?) {
+    guard let data = data else { return }
+    self.thumbnailImageView.kf.setImage(with: data.thumbnailURL, placeholder: UIImage(systemName: "photo"))
+    self.titleLabel.text = data.title
+    self.contentLabel.text = data.content
+    self.cafeNameLabel.text = data.cafeName
+    
+    var datetime: String {
+      let dateFormatter = DateFormatter()
+      dateFormatter.dateFormat = "yyyy년 MM월 dd일"
+      let contentDate = data.datetime ?? Date()
+      
+      return dateFormatter.string(from: contentDate)
+    }
+    
+    self.dateTimeLabel.text = datetime
+  }
 }

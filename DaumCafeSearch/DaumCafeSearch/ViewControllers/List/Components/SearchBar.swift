@@ -10,7 +10,7 @@ import UIKit
 import SnapKit
 import Then
 
-class SearchBar: UISearchBar {
+final class SearchBar: UISearchBar {
   
   // MARK: Properties
   
