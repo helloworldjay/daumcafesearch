@@ -19,6 +19,7 @@
 		48C3CC75277D44C1003B2A55 /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = 48C3CC74277D44C1003B2A55 /* Then */; };
 		48C3CC78277D44C7003B2A55 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 48C3CC77277D44C7003B2A55 /* Kingfisher */; };
 		48C3CC7C277D4680003B2A55 /* CafeSearchListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C3CC7B277D4680003B2A55 /* CafeSearchListViewController.swift */; };
+		48C3CC81277D4A71003B2A55 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C3CC80277D4A70003B2A55 /* UIColor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		48C3CC5D277D430C003B2A55 /* DaumCafeSearchUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaumCafeSearchUITests.swift; sourceTree = "<group>"; };
 		48C3CC5F277D430C003B2A55 /* DaumCafeSearchUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaumCafeSearchUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		48C3CC7B277D4680003B2A55 /* CafeSearchListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CafeSearchListViewController.swift; sourceTree = "<group>"; };
+		48C3CC80277D4A70003B2A55 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +138,7 @@
 				48C3CC45277D430C003B2A55 /* Assets.xcassets */,
 				48C3CC47277D430C003B2A55 /* LaunchScreen.storyboard */,
 				48C3CC4A277D430C003B2A55 /* Info.plist */,
+				48C3CC80277D4A70003B2A55 /* UIColor.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -301,6 +304,7 @@
 				48C3CC3D277D4309003B2A55 /* AppDelegate.swift in Sources */,
 				48C3CC3F277D4309003B2A55 /* SceneDelegate.swift in Sources */,
 				48C3CC7C277D4680003B2A55 /* CafeSearchListViewController.swift in Sources */,
+				48C3CC81277D4A71003B2A55 /* UIColor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
