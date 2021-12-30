@@ -12,6 +12,8 @@ protocol CafeSearchViewModelLogic {
   var loadingStarted: () -> Void { get set }
   var loadingEnded: () -> Void { get set }
   var cafeArticleListUpdated: () -> Void { get set }
+  
+  func list(with keyword: String)
   func cafeArticle(at index: Int) -> CafeArticle?
   func countCafeArticleList() -> Int
 }
@@ -37,6 +39,20 @@ final class CafeSearchViewModel: CafeSearchViewModelLogic {
   
   func countCafeArticleList() -> Int {
     return self.cafeArticleList.count
+  }
+  
+  
+  // MARK: Fetch List Logic
+  
+  func list(with keyword: String) {
+    self.isLoading = true
+    self.loadingStarted()
+    self.repository?.list(with: keyword) { [weak self] in
+      self?.cafeArticleList = $0
+      self?.cafeArticleListUpdated()
+      self?.loadingEnded()
+      self?.isLoading = false
+    }
   }
 }
 
