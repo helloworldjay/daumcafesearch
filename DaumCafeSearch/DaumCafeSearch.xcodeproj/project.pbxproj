@@ -30,6 +30,7 @@
 		48C3CC94277DC492003B2A55 /* CafeSearchRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C3CC93277DC492003B2A55 /* CafeSearchRepository.swift */; };
 		48C3CC9C277DD5FA003B2A55 /* CafeSearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C3CC9B277DD5FA003B2A55 /* CafeSearchViewModel.swift */; };
 		48C3CCA0277DE509003B2A55 /* CafeArticleDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C3CC9F277DE509003B2A55 /* CafeArticleDetailView.swift */; };
+		48C3CCA2277DE9FE003B2A55 /* CafeArticleDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C3CCA1277DE9FE003B2A55 /* CafeArticleDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +74,7 @@
 		48C3CC93277DC492003B2A55 /* CafeSearchRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CafeSearchRepository.swift; sourceTree = "<group>"; };
 		48C3CC9B277DD5FA003B2A55 /* CafeSearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CafeSearchViewModel.swift; sourceTree = "<group>"; };
 		48C3CC9F277DE509003B2A55 /* CafeArticleDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CafeArticleDetailView.swift; sourceTree = "<group>"; };
+		48C3CCA1277DE9FE003B2A55 /* CafeArticleDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CafeArticleDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -233,6 +235,7 @@
 			isa = PBXGroup;
 			children = (
 				48C3CC9E277DE4ED003B2A55 /* Components */,
+				48C3CCA1277DE9FE003B2A55 /* CafeArticleDetailViewController.swift */,
 			);
 			path = Detail;
 			sourceTree = "<group>";
@@ -397,6 +400,7 @@
 				48C3CC3D277D4309003B2A55 /* AppDelegate.swift in Sources */,
 				48C3CC7F277D4A1D003B2A55 /* SearchBar.swift in Sources */,
 				48C3CC3F277D4309003B2A55 /* SceneDelegate.swift in Sources */,
+				48C3CCA2277DE9FE003B2A55 /* CafeArticleDetailViewController.swift in Sources */,
 				48C3CC7C277D4680003B2A55 /* CafeSearchListViewController.swift in Sources */,
 				48C3CCA0277DE509003B2A55 /* CafeArticleDetailView.swift in Sources */,
 				48C3CC94277DC492003B2A55 /* CafeSearchRepository.swift in Sources */,
