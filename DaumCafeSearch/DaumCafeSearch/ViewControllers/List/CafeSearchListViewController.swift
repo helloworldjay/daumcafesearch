@@ -35,6 +35,10 @@ final class CafeSearchListViewController: UIViewController {
   
   private func attribute() {
     self.navigationItem.title = "Daum 카페 검색"
+    self.navigationController?.navigationBar.titleTextAttributes = [
+      .foregroundColor: UIColor.daumCafeColor!,
+      .font: UIFont.systemFont(ofSize: 20, weight: .bold)
+    ]
     self.view.backgroundColor = .white
   }
   
