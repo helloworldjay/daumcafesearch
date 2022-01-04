@@ -68,6 +68,7 @@ final class CafeSearchListViewController: UIViewController {
     self.cafeArticleListView.dataSource = self
     self.cafeArticleListView.delegate = self
     
+    self.searchBar.delegate = self
     self.setSearchBarButton()
     self.setRefreshControl()
   }
@@ -140,6 +141,16 @@ extension CafeSearchListViewController: UITableViewDelegate {
     let detailViewController = CafeArticleDetailViewController()
     detailViewController.article = viewModel?.cafeArticle(at: indexPath.row)
     self.navigationController?.pushViewController(detailViewController, animated: true)
+  }
+}
+
+
+// MARK: - SearchBar Delegate
+
+extension CafeSearchListViewController: UISearchBarDelegate {
+  func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+    self.searchKeyword = self.searchBar.text ?? ""
+    self.loadList()
   }
 }
 
