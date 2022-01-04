@@ -33,15 +33,6 @@ final class SearchBar: UISearchBar {
     fatalError("init(coder:) has not been implemented")
   }
   
-  private func configure() {
-    self.placeholder = "검색어를 입력하세요."
-    self.setImage(
-      UIImage(named: "icSearchNonW"),
-      for: UISearchBar.Icon.search,
-      state: .normal
-    )
-  }
-  
   private func layout() {
     self.addSubview(searchButton)
     
@@ -55,6 +46,22 @@ final class SearchBar: UISearchBar {
       $0.centerY.equalToSuperview()
       $0.trailing.equalToSuperview().inset(12)
     }
+  }
+  
+  private func configure() {
+    self.placeholder = "검색어를 입력하세요."
+    self.setImage(
+      UIImage(named: "icSearchNonW"),
+      for: UISearchBar.Icon.search,
+      state: .normal
+    )
+    self.setSearchTextField()
+  }
+  
+  private func setSearchTextField() {
+    self.searchTextField.textColor = .white
+    self.searchTextField.backgroundColor = .black
+    self.searchTextField.leftView?.tintColor = .white
   }
 }
 
